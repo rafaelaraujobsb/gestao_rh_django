@@ -129,8 +129,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "static"), # local onde o django vai buscar os arquivos estáticos
 ]
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'login'
+
+MEDIA_URL  = '/home/monopoly/Downloads/' 
+
+# Midia Local
+MEDIA_ROOT  = os.path.join(BASE_DIR, "media")
